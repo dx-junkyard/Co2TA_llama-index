@@ -13,8 +13,5 @@ class UserInput(BaseModel):
 
 @app.post("/get_form/")
 async def get_form(user_input: UserInput):
-    try:
-        markdown_content = get_application_form(user_input.text)
-        return {"markdown": markdown_content}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    markdown_content = get_application_form(user_input.text)
+    return {"markdown": markdown_content}
