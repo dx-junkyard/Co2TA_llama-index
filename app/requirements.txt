@@ -3,3 +3,4 @@ uvicorn[standard]
 openai
 PyPDF2
 pandas
+tiktoken

@@ -12,4 +12,9 @@ docker run -d \
     uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 # APIテスト
+
+## local
 curl -X POST "http://localhost:8000/get_form/" -H "Content-Type: application/json" -d '{"text": "太陽光パネルを設置したい"}'
+
+## Azure
+curl -X POST "https://co2ta-backend-app.braveforest-bf682c8f.japaneast.azurecontainerapps.io/get_form/" -H "Content-Type: application/json" -d '{"text": "太陽光パネルを設置したい"}'
