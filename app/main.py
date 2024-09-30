@@ -11,6 +11,10 @@ initialize_database()
 class UserInput(BaseModel):
     text: str
 
+@app.get("/health_check")
+async def health_check():
+    return {"status": "healthy"}
+
 @app.post("/get_form/")
 async def get_form(user_input: UserInput):
     markdown_content = get_application_form(user_input.text)
