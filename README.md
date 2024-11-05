@@ -18,3 +18,5 @@ curl -X POST "http://localhost:8000/get_form/" -H "Content-Type: application/jso
 
 ## Azure
 curl -X POST "https://co2ta-backend-app.braveforest-bf682c8f.japaneast.azurecontainerapps.io/get_form/" -H "Content-Type: application/json" -d '{"text": "太陽光パネルを設置したい"}'
+
+## テスト
